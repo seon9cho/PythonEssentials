@@ -26,15 +26,12 @@ def backward(s):
 def list_ops():
 	my_list = ["bear", "ant", "cat", "dog"]
 	my_list.append("eagle")
-	my_list.remove(my_list[2])
-	my_list.insert(2, "fox")
-	my_list.remove(my_list[1])
+	my_list[2] = "fox"
+	my_list.pop(1)
 	my_list.sort()
 	my_list.reverse()
-	i = my_list.index("eagle")
-	my_list.remove("eagle")
-	my_list.insert(i, "hawk")
-	my_list[-1] += "hunter"
+	my_list[my_list.index("eagle")] = "hawk"
+	my_list.append("hunter")
 	return my_list
 
 def pig_latin(word):
